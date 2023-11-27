@@ -5,6 +5,7 @@
 <div>
   <%= link_to "Edit this product", edit_product_path(@product) %> |
   <%= link_to "Back to products", products_path %>
+  <%= button_to "Buy-Now",checkout_create_path(id: @product.id), class:"btn btn-outline-danger btn-lg btn-block mt-3",  data: { turbo: false }  %>
 
   <%= button_to "Destroy this product", @product, method: :delete %>
 </div>
